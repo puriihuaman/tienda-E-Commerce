@@ -1,0 +1,39 @@
+$width-icon: 28px;
+$height-icon: 4px;
+
+.iconMenu {
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	padding: var(--small-padding);
+	background-color: var(--primary-color500);
+	border-radius: var(--border-radius);
+
+	@media screen and (min-width: 64rem) {
+		display: none;
+	}
+
+	&__icon {
+		position: relative;
+		width: $width-icon;
+		height: $height-icon;
+		background-color: var(--white-color500);
+		border-radius: var(--border-radius);
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			top: 9px;
+			display: block;
+			width: $width-icon;
+			height: $height-icon;
+			background-color: var(--white-color500);
+			border-radius: var(--border-radius);
+		}
+		&::after {
+			top: -9px;
+		}
+	}
+}

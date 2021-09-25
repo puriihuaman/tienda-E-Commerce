@@ -1,0 +1,28 @@
+$min-width-card: 270px;
+$max-width-card: 290px;
+
+.projects {
+	padding: var(--x-large-padding) 0;
+
+	&__header {
+		padding: var(--small-padding) 0;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__content {
+		display: grid;
+		justify-content: center;
+		gap: var(--normal-gap);
+		
+		@media screen and (min-width: $table-width) {
+			grid-template-columns: repeat(auto-fit, minmax($min-width-card, $max-width-card));
+		}
+		@media screen and (min-width: $desktop-width) {
+			grid-template-columns: repeat(auto-fit, minmax($min-width-card, $max-width-card));
+			gap: var(--small-gap);
+		}
+	}
+}

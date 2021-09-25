@@ -1,0 +1,16 @@
+
+// Estilos base
+@import 'base/variables.scss';
+@import 'base/my-normalize.scss';
+@import 'base/base.scss';
+
+// Estilos reutilizables
+@import 'mixins/input.scss';
+@import 'mixins/button.scss';
+@import 'mixins/links.scss';
+
+// Estilos claves
+@import 'components/header.scss';
+
+// Estilos de ayuda
+@import 'helpers/scrollbar.scss';

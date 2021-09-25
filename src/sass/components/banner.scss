@@ -1,0 +1,33 @@
+$table-width: 768px;
+$desktop-width: 1024px;
+$large-desktop-width: 1280px;
+
+.home {}
+
+.banner {
+	background-image: var(--image);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: var(--attachment);
+
+	&__opacity {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		min-height: 100vh;
+		background-color: rgba(0, 0, 0, .8);
+	}
+
+	&__content {}
+
+	&__title { font-size: var(--h1-font-size); }
+}
+
+.button--contact {
+	background-color: var(--primary-color500);
+	border-color: var(--primary-color500);
+}
+.button--contact:hover { background-color: var(--primary-color600); }

@@ -1,0 +1,83 @@
+$width-form: 600px;
+
+$table-width: 768px;
+$desktop-width: 1024px;
+$large-desktop-width: 1280px;
+
+.container-form {
+	padding: var(--x-large-padding) var(--normal-padding);
+	margin-left: auto;
+	margin-right: auto;
+	
+	background-color: var(--dark-color500);
+	border-radius: calc(var(--border-radius) * 2);
+
+	@media screen and (min-width: $table-width) {
+		width: $width-form;
+	}
+}
+
+.form {
+	padding: var(--normal-padding);
+	transition: max-width .3s;
+
+	&__header {
+		@media screen and (min-width: $desktop-width) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: var(--normal-padding);
+		}
+	}
+
+	&__field {
+		@media screen and (min-width: $desktop-width) {
+			width: 48%;
+		}
+	}
+
+	&__textarea {
+		width: 100%;
+		margin-bottom: var(--normal-margin);
+	}
+	
+	&__area {
+		resize: none;
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		margin-bottom: var(--normal-margin);
+		font-size: var(--small-font-size);
+
+		@media screen and (min-width: $desktop-width) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__loader {
+		padding: var(--small-padding);
+		padding-top: 0;
+		display: none;
+
+		&--show {
+			display: block;
+		}
+	}
+
+	&__button {
+		background-color: var(--primary-color500);
+		border-color: var(--primary-color500);
+		&:hover {
+			background-color: var(--primary-color600);
+		}
+	}
+}
+
+.copy-page {
+	&__text {
+		text-align: center;
+		font-size: var(--normal-font-size);
+	}
+}
